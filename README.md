@@ -1,10 +1,10 @@
 # 🚀 DSA & Interview Preparation Tracker
 
 ## 📌 Overview
-This repository is for tracking our group's progress in **DSA, System Design, and CS Fundamentals** to prepare for product-based IT company interviews.
+This repository is for tracking our group's progress in **DSA, System Design, CS Fundamentals, and more** to prepare for product-based IT company interviews.
 
 ### 🔥 How We Use This Repo
-1. 📅 **Daily Progress Logs** → Each member updates `progress.md` daily.
+1. 📅 **Daily Progress Logs** → Each member maintains their own folder.
 2. ✅ **Task Management (GitHub Projects)** → Track tasks in the Kanban board.
 3. 💬 **Doubt Discussions (Issues)** → Raise an issue if you're stuck.
 4. 🎯 **Weekly Review (Pull Requests)** → Summarize weekly progress via PRs.
@@ -15,73 +15,107 @@ This repository is for tracking our group's progress in **DSA, System Design, an
 ```
 📂 DSA-Interview-Prep
  ├── 📜 README.md         # Instructions & guidelines
- ├── 📜 progress.md       # Daily logs by all members
- ├── 📜 topics_list.md    # List of topics to cover
- ├── 📜 resources.md      # Useful links & study resources
- ├── 📜 issue_template.md # Template for doubts
+ ├── 📂 Amit              # Individual Member's Folder
+ │   ├── 📂 DSA           # Amit's DSA solutions
+ │   ├── 📂 CS-Fundamentals  # Amit's CS Basics Notes
+ │   ├── progress.md      # Amit's personal progress log
+ ├── 📂 Rohit             # Another Member's Folder
+ │   ├── 📂 DSA
+ │   ├── 📂 CS-Fundamentals
+ │   ├── progress.md
+ ├── 📂 Hitesh
+ │   ├── 📂 DSA
+ │   ├── 📂 CS-Fundamentals
+ │   ├── progress.md
+ ├── 📂 (new Member)
+ │   ├── 📂 DSA
+ │   ├── 📂 CS-Fundamentals
+ │   ├── progress.md
 ```
+
+Each member creates their own **folder** with their name inside `DSA-Interview-Prep/`. Inside their folder, they can create:
+- `DSA/` → Stores their **daily DSA solutions**.
+- `CS-Fundamentals/` → Stores **notes on OS, DBMS, CN, etc.**
+- `progress.md` → Personal progress log.
+- Any other folders as needed for additional topics.
 
 ---
 
 ## 🏆 How to Contribute
-### 1️⃣ Daily Progress Updates (`progress.md`)
-Every member logs their progress daily in `progress.md`.
+### 1️⃣ Daily Progress Updates
+Each member updates their own folder daily.
 
-**Example Entry:**
+**Example for Amit (`DSA-Interview-Prep/Amit/DSA/day1.md`)**
 ```md
-### 📅 March 4, 2025 - Daily Progress
-#### Amit:
-✅ Solved 3 DP problems  
-✅ Studied Normalization in DBMS  
-❌ Couldn't solve a Graph question, need discussion  
-
-#### Rohit:
-✅ Solved 2 Binary Search problems  
-✅ Learned about TCP/IP  
-🚧 Still struggling with Recursion  
-
-#### Hitesh:
-✅ Revised OOP SOLID principles  
-✅ Attempted 1 mock interview  
-🏆 Completed all tasks  
+### 📅 March 4, 2025 - DSA Solutions
+#### Problem 1: Two Sum
+**Approach:** Used HashMap for O(n) solution.
+**Code:**
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashmap = {}
+        for i, num in enumerate(nums):
+            diff = target - num
+            if diff in hashmap:
+                return [hashmap[diff], i]
+            hashmap[num] = i
 ```
----
-
-### 2️⃣ Task Tracking with GitHub Projects
-We use a **Kanban board** for tracking topics.
-- ✅ **To Do** → Upcoming problems/topics
-- 🚧 **In Progress** → Currently solving
-- 🔄 **Needs Review** → Tough problems
-- 🏆 **Completed** → Solved topics
-
-**To Access the Board:** Go to `Projects` tab and move tasks accordingly.
 
 ---
 
-### 3️⃣ Raise Issues for Doubts
-If you’re stuck, create a **GitHub Issue** so others can help.
-#### **Issue Template (`issue_template.md`)**
+## 📌 Topics to Cover
+### Data Structures & Algorithms
+- Arrays & Strings
+- Linked List
+- Stack & Queue
+- Recursion & Backtracking
+- Sorting & Searching
+- Hashing & HashMaps
+- Binary Trees & BST
+- Heaps & Priority Queue
+- Graphs (BFS, DFS, Dijkstra, Floyd-Warshall)
+- Dynamic Programming (Knapsack, LIS, LCS, Coin Change)
+- Bit Manipulation
+
+### CS Fundamentals
+- Operating Systems (Processes, Threads, Synchronization, Deadlocks)
+- Database Management System (Normalization, Joins, Indexing, Transactions)
+- Computer Networks (TCP/IP, HTTP, DNS, Load Balancing, CDN)
+- System Design (Scalability, Caching, Microservices, CAP Theorem)
+- Object-Oriented Programming (SOLID, Design Patterns, Inheritance, Polymorphism)
+
+---
+
+## 📚 Useful Study Resources
+### DSA Resources
+- [NeetCode](https://neetcode.io/)
+- [Striver’s SDE Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
+- [Leetcode Patterns](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
+- [Codeforces](https://codeforces.com/)
+
+### CS Fundamentals
+- **Operating Systems:** Galvin Book, [MIT OS Course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-828-operating-system-engineering-fall-2012/)
+- **DBMS:** Korth, [DBMS Playlist](https://www.youtube.com/playlist?list=PL7D-cg0GBpDkWcujU3TjBtzotir23cFjC)
+- **Computer Networks:** Tanenbaum, [CN Lectures](https://www.youtube.com/playlist?list=PLRuqvIo14SeT0HsznB0vuYavzz1eFsGMG)
+- **System Design:** [Grokking System Design](https://www.educative.io/courses/grokking-the-system-design-interview), Designing Data-Intensive Applications
+
+### Mock Interviews
+- [Pramp](https://www.pramp.com/)
+- [InterviewBit](https://www.interviewbit.com/)
+- [Leetcode Contests](https://leetcode.com/contest/)
+
+---
+
+## ❓ Doubt Discussion Format
+If you are stuck on a problem, raise an issue using this format:
 ```md
 ### ❓ Problem/Doubt
-**Topic:** Dynamic Programming  
-**Problem:** Struggling with Memoization vs Tabulation  
-**What I Tried:** Used recursion, but getting TLE  
-**Need Help From:** Anyone who understands DP optimization  
+**Topic:** Dynamic Programming
+**Problem:** Struggling with Memoization vs Tabulation
+**What I Tried:** Used recursion, but getting TLE
+**Need Help From:** Anyone who understands DP optimization
 ```
-
----
-
-### 4️⃣ Weekly Review (Pull Requests)
-- Every Sunday, each member **summarizes their progress** and creates a PR.
-- Use a PR template to review & discuss improvements.
-
----
-
-## 📚 Study Resources (`resources.md`)
-1. **DSA:** Neetcode, Striver’s SDE Sheet, Leetcode
-2. **CS Fundamentals:** CS50, Operating Systems (Galvin), DBMS (Korth)
-3. **System Design:** Grokking System Design, Designing Data-Intensive Applications
-4. **Mock Interviews:** Pramp, InterviewBit, Leetcode Contests
 
 ---
 
