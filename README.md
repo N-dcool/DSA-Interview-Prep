@@ -13,25 +13,15 @@ This repository is for tracking our group's progress in **DSA, System Design, CS
 
 ## 📁 Folder Structure
 ```
-📂 DSA-Interview-Prep
- ├── 📜 README.md         # Instructions & guidelines
- ├── 📂 Amit              # Individual Member's Folder
- │   ├── 📂 DSA           # Amit's DSA solutions
- │   ├── 📂 CS-Fundamentals  # Amit's CS Basics Notes
- │   ├── progress.md      # Amit's personal progress log
- ├── 📂 Rohit             # Another Member's Folder
- │   ├── 📂 DSA
- │   ├── 📂 CS-Fundamentals
- │   ├── progress.md
- ├── 📂 Hitesh
- │   ├── 📂 DSA
- │   ├── 📂 CS-Fundamentals
- │   ├── progress.md
- ├── 📂 (new Member)
- │   ├── 📂 DSA
- │   ├── 📂 CS-Fundamentals
- │   ├── progress.md
+📂 DSA-Interview-Prep   # Common Repo (Main Repository)
+ ├── 📂 Amit   -> (Submodule: Amit's Repo)
+ ├── 📂 Rohit  -> (Submodule: Rohit's Repo)
+ ├── 📂 Hitesh -> (Submodule: Hitesh's Repo)
+ ├── 📂 Naresh -> (Submodule: My Repo)
+ ├── 📜 README.md  # Guidelines & Instructions
+
 ```
+
 
 Each member creates their own **folder** with their name inside `DSA-Interview-Prep/`. Inside their folder, they can create:
 - `DSA/` → Stores their **daily DSA solutions**.
